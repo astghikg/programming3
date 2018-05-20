@@ -18,4 +18,10 @@ io.on('connection', function (socket) {
         messages.push(data);
         io.sockets.emit("display message", data);
     })
+
+    socket.on('uzum em jnjem', function () {
+       messages = [];
+       io.sockets.emit('dzer tagery jnjeq');
+    });
+
 });
